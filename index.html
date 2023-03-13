@@ -6,32 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora de Ritmos</title>
     <link rel="stylesheet" href="style.css" />
-  
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cutive+Mono&family=IBM+Plex+Sans&family=Noto+Sans+Warang+Citi&family=Roboto+Condensed:ital,wght@0,300;0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div>
-      <h1>Calcular Distancia/Velocidad/Ritmo</h1>
-      <input type="number" placeholder="Distancia" >
-    
-    </div>  
-      <h2>Tiempo</h2>
-      <input type="number" min="00" />
-      <input type="number" min="00" max="59" />
-      <input type="number" min="00" max="59" />
+    <div class="mainContainer">
+      <form class="mainContainerBlur">
+        <h1 class="title">Calculadora de Ritmos de Carrera</h1>
 
-      <h2>Ritmo parcial</h2>
-      <input type="number" min="00" max="59" value="min" />
-      <input type="number" min="00" max="59" value="seg" />
+        <label class="label">Distancia (en kilómetros) :</label>
+        <div >
+        <input class="distancia" type="text" maxlength="2" id="distancia" required placeholder="00"/>
+        <label class="label" for="separadores">km</label>
+        <input  class="distancia" type="text"  maxlength="4" id="distancia" min="0" step="0.01" placeholder="00">  
+        <label class="label" for="">m</label>
+      </div>
+        <br>
+
+        <label class="label">Tiempo :</label>
+        <div class="tiempo">
+        <input class="inputClass" maxlength="2" type="text" id="tiempo" min="0" max="59" step="1" placeholder="00">
+        <label class="label">:</label>
+        <input class="inputClass" maxlength="2" type="text" id="tiempo" min="0" max="59" step="1" placeholder="00">
+        <label class="label">:</label>
+        <input class="inputClass" maxlength="2" type="text" id="tiempo" min="0" max="59" step="1" placeholder="00">
+      </div>
+        <br /><br />
+        <label class="label">Ritmo parcial(en minutos) : </label>
+
+        <div class="inputClass">
+        <input class="inputRitmo"  type="text" id="ritmoMinutos" max="59" placeholder="00"  maxlength="2"/>
+        <label class="label" for=""> : </label>
+        <input class="inputRitmo" type="text" id="ritmoSegundos" min="0" max="59" placeholder="00"  maxlength="2"/>
+      </div>
+        <br />
+        <div class="containerButtons">
+          <button class="buttonCalculate" type="button" onclick="claculate()">
+            <span>Calcular</span>
+          </button>
+          <button class="buttonReset" type="button" onclick="deleteInput()">
+            <span>Borrar datos</span>
+          </button>
+        </div>
+      </form>
+      <br />
+      <p id="resultado"></p>
     </div>
-    <br />
-    <div>
-      <button type="submit">calcular</button>
-    </div>
-    <br>
-    <div>
-      <button type="reset">reiniciar</button>
-    </div>
-      <script src="main.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

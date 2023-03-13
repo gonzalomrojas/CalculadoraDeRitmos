@@ -1,0 +1,159 @@
+body {
+  background-color: darkgray;
+  background-image: url(img/photo-800m.jfif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/*Estilos para el main*/
+
+.mainContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.mainContainerBlur {
+  backdrop-filter: blur(10px);
+  padding: 80px;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 2px 2px 60px 2px #141414;
+}
+
+
+.title {
+    color: #fff;
+    font-family:'Bebas Neue', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+.label{
+    color: #fff;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 22px;
+}
+
+.inputClass {
+    font-family: 'Bebas Neue', cursive;
+    color: #141414;
+    font-size: 20px;
+    width: 50%;
+    text-align: center;
+}
+
+.distancia {
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    width: 50px;
+}
+
+.tiempo {
+    display: flex;
+    width: 100px;
+}
+
+.inputRitmo {
+    width: 20px;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+}
+
+
+/*En esta parte se le da estilos  a los botones de calcular y boorar datos  */
+
+.containerButtons {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 15px;
+
+        
+}
+.buttonCalculate {
+    background-color: #ff5e00;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 10px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 22px;  
+}
+.buttonReset {
+    background-color: #ff5e00;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 10px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 22px;  
+}
+.buttonCalculate:hover {
+    background-color: #fff;
+    color: #000000;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.buttonReset:hover {
+    background-color: #000000;
+    color: #ffffff;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+
+/*
+.buttonCalculate {
+  display: inline-flex;
+  width: 100%;
+  height: 80px;
+  background: #141414;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s ease all;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.buttonCalculate span {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease all;
+}
+
+.buttonCalculate::after {
+  content: "";
+  width: 100%;
+  background: rgb(255, 0, 0);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: calc(-100% - 80px);
+  border-bottom: 80px solid gold;
+  border-right: 80px solid transparent;
+  transition: 0.4s ease-in-out;
+}
+.buttonCalculate:hover::after {
+  top: 0;
+  background-color: aqua;
+}
